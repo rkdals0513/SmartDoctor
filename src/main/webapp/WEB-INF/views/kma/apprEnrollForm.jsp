@@ -143,6 +143,7 @@
 					<form id="insertAppr" action="" method="post" enctype="multipart/form-data" >
 						<input type="hidden" value="${ loginUser.empNo }" name="empNo">
 						<input type="hidden" value="" name="formNo">
+						<input type="hidden" value="" name="apprTotal">
 						<div class="appr-table-wrapper">
 							<button type="button" class="btn appr-write-btn" onclick="postFormSubmit('apprInsert.si');">
 								<i class="mdi mdi-arrow-up-bold" style="color: white;"></i>&nbsp;
@@ -331,9 +332,7 @@
 			}
 			
 		</script>
-		
-		
-		
+			
 		<!-- 결재라인 모달창 -->
 		<div class="modal fade" id="lineModal" tabindex="-1"
 			aria-labelledby="lineModalLabel" aria-hidden="true">
@@ -532,29 +531,44 @@
 				
 				$("#appr-line").off('click').on('click', function(){ // 결재자
 					
-					console.log($(".empId").text());
-					console.log(member.empNo);
+					if( $("#apprLine").find(".empId").length){
+						console.log("있음");
+						$(".empId").each(function(index, item){ 
+							
+							if( $(item).text() == member.empNo ){
+								
+								alert("중복된 대상입니다.");
+								$("#appr-line").off('click');
+							}else if( $("#apprLine").children(".ap-md-bd").length > 2 ){ // 3명 이상 선택 제한
+								
+								alert("최대 결재인원은 3명입니다.");
+								$("#appr-line").off('click');
+								
+							}else{ 
+								console.log("있음2");
+								$("#apprLine").append(data);
+							}
+						})
+					}else{
+						console.log("없음");
+						$("#apprLine").append(data);
+					}
 					
-					if( $(".empId").text() == member.empNo ){ // 동일한 사원 선택 제한
+					
+					/* if( $(".empId").text() == member.empNo ){ // 동일한 사원 선택 제한
 						
 						alert("중복된 대상입니다.");
 						$("#appr-line").off('click');
 					
-					}else if( $("#apprLine").children(".ap-md-bd").length > 2 ){ // 3명 이상 선택 제한
+					}else */ 
 						
-						alert("최대 결재인원은 3명입니다.");
-						$("#appr-line").off('click');
-						
-					}else{ 
-						
-						$("#apprLine").append(data);
-					}
+					
 					
         		})
         		
         		$("#appr-line-ref").off('click').on('click', function(){ // 참조자
         			
-					if( $("#apprRef").find(".ap-md-bd").children("td:eq(0)").text() == member.empNo ){ // 동일한 사원 선택 제한
+					if( $("#apprRef").find(".ap-md-bd").children(".empId").text() == member.empNo ){ // 동일한 사원 선택 제한
 						
 						alert("중복된 대상입니다.");
 						$("#appr-ref").off('click');
@@ -570,8 +584,6 @@
 					}
         			
         		})
-        		
-        		
 			}
 			
 			$(document).on('click', '.al-del', function(){ // 결재라인 지정 삭제
@@ -582,15 +594,19 @@
 			function selectedApprLine(){ // 결재라인 지정 '선택하기' 버튼 클릭시 form에 넘길 요소
 				
 				let apprTotal = $("#apprLine").children(".ap-md-bd").length;
-				//$("input[name=apprTotal]").attr('value', apprTotal); // 총결재자수
-				$("#insertAppr").append("<input type='hidden' value='" + apprTotal + "' name='apprTotal'>"); // 총결재자수
+				$("input[name=apprTotal]").attr('value', apprTotal);  // 총결재자수
 				
-				$("#apprLine").children(".ap-md-bd").each(function(index, item){ // 결재자들 
-					$("#insertAppr").append("<input type='hidden' value='" + $(item).children('.empId').text() + "' name='lineList[" + index + "].empNo'>")
+				// 이미 넘겨준 결재자, 참조자 삭제
+				$(".line").remove();
+				$(".ref").remove();
+				
+				// 결재자, 참조자 index 다시 부여
+				$("#apprLine").children(".ap-md-bd").each(function(index, item){ 
+					$("#insertAppr").append("<input type='hidden' class='line' value='" + $(item).children('.empId').text() + "' name='lineList[" + index + "].empNo'>")
 				})
 				
-				$("#apprRef").children(".ap-md-bd").each(function(index, item){ // 참조자들
-					$("#insertAppr").append("<input type='hidden' value='" + $(item).children('.empId').text() + "' name='RefList[" + index + "].empNo'>")
+				$("#apprRef").children(".ap-md-bd").each(function(index, item){ 
+					$("#insertAppr").append("<input type='hidden' class='ref' value='" + $(item).children('.empId').text() + "' name='RefList[" + index + "].empNo'>")
 				})
 				
 				$('#lineModal').modal('hide');
