@@ -231,21 +231,16 @@ th {
 
 	<script>
 	/* 입원일수 */
-			$('#date-btn').click(function(){
-				
-				let dateDiff = 0;
-				let ed = new Date($("input[name='enterDate']").val());
-				let ld = new Date($("input[name='leaveDate']").val());
-				dateDiff = Math.ceil((ld.getTime()-ed.getTime())/(1000*3600*24))+1;
-				
-				$("input[name='stayDate']").attr('value', dateDiff);
-			})
-		</script>
-
-
-
-
-
+	$('#date-btn').click(function(){
+		
+		let dateDiff = 0;
+		let ed = new Date($("input[name='enterDate']").val());
+		let ld = new Date($("input[name='leaveDate']").val());
+		dateDiff = Math.ceil((ld.getTime()-ed.getTime())/(1000*3600*24))+1;
+		
+		$("input[name='stayDate']").attr('value', dateDiff);
+	})
+	</script>
 
 
 
@@ -257,14 +252,6 @@ th {
 	    </div>
   	</div>
 	
-	
-	
-	
-	
-	
-
-
-
 
 
 	<script>

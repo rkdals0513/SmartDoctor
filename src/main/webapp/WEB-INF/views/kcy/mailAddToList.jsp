@@ -13,250 +13,248 @@
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
 	rel="stylesheet">	
 <style>
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
-
-html, body {
-	margin: 0;
-	height: 100%;
-	overflow-x: hidden;
-	overflow-y: auto;
-	font-family: "Nanum Gothic", serif;
-	overflow-x: hidden;
-}
-
-.popup-outer {
-	width: 1250px;
-	height: 860px;
-	margin: 0;
-	box-sizing: border-box;
-}
-
-.popup-title {
-	margin: 0;
-	width: 100%;
-	height: 50px;
-	background-color: RGB(65, 125, 122) ;
-	font-size: 25px;
-	padding: 10px;
-	color: white;
-	box-sizing: border-box;
-}
-
-.popup-content {
-	padding: 20px;
-}
-
-.searchBar {
-	margin-left: 15px;
-}
-
-.searchBar>select {
-	height: 36px;
-	width: 70px;
-	border: 1px solid lightgray;
-	border-radius: 3px;
-	font-family: inherit;
-	display: inline-block;
-}
-
-.searchBar>input {
-	padding: 5px;
-	width: 220px;
-	height: 25px;
-	border: 1px solid lightgray;
-	border-radius: 3px;
-}
-
-.searchBar>svg {
-	fill: rgb(26, 188, 156);
-	width: 37px;
-	display: inline-block;
-	vertical-align: bottom;
-	height: 100%;
-}
-
-.searchBar>svg:hover {
-	cursor: pointer;
-	opacity: 70%;
-}
-div {
-	box-sizing: border-box;
-}
-
-#wrap {
-	margin-top: 20px;
-	margin-left: 15px; width : 1200px;
-	height: 700px;
-	width: 1200px;
-}
-
-#wrap>div {
-	float: left;
-	margin-right: 18px;
-}
-
-#groupArea {
-	height: 100%;
-	width: 380px;
-	border: 1px solid lightgray;
-}
-
-.group_tree, .group_tree ul {
-	list-style: none;
-	padding-left: 17px;
-}
-
-.group_tree a {
-	text-decoration: none;
-	color: rgb(77, 77, 77);
-}
-
-.group_tree *::before {
-	width: 17px;
-	height: 15px;
-	display: inline-block;
-}
-
-.group_tree a:before {
-	content: '└';
-	font-family: fontello;
-}
-
-.group_tree label {
-	cursor: pointer;
-}
-
-.group_tree label:before {
-	content: '\E802';
-	font-family: fontello;
-	color: gray;
-}
-
-.group_tree input[type="checkbox"] {
-	display: none;
-}
-
-.group_tree input[type="checkbox"]:checked ~ul{
-	display: none;
-}
-
-.group_tree input[type="checkbox"]:checked+label:before {
-	content: '\E801';
-}
-
-.group_tree ul, .group_tree li {
-	padding-top: 10px;
-	height: 35px;
-}
-
-#listArea {
-	height: 100%;
-	width: 380px;
-	border: 1px solid lightgray;
-}
-
-.checkBox {
-	zoom: 1.7;
-}
-
-.boardTable {
-	width: 100%;
-	height: auto;
-}
-
-.boardTable, .boardTable th, .boardTable td {
-	border-width: 1px 0;
-	border-collapse: collapse;
-	text-align: center;
-	font-size: 15px;
-}
-
-.boardTable th {
-	background-color: #999;
-	color: #fff;
-	height: 35px;
-}
-
-.boardTable td {
-	border-color: lightgray;
-	border-style: solid;
-	height: 35px;
-}
-
-.boardTable tr:hover td {
-	background-color: rgb(224, 224, 224);
-	cursor: pointer;
-}
-
-
-#selectArea {
-	height: 100%;
-	width: 380px;	
-}
-
-#selectArea>div {
-	width: 100%;
-	height: 50%;	
-}
-#selectArea>div>div{border: 1px solid lightgray;}
-
-.smallBtn {
-	width: 60px;
-	height: 25px;
-	border: 0px;
-	border-radius: 5px;
-	background: RGB(65, 125, 122) ; /* 회색 : rgb(190, 190, 190) */
-	color: white;
-	font-size: 12px;
-}
-
-.middleBtn {
-	width: 90px;
-	height: 35px;
-	border: 0px;
-	border-radius: 5px;
-	background: RGB(65, 125, 122) ; /* 회색 : rgb(190, 190, 190) */
-	color: white;
-	font-size: 15px;
-}
-
-.middleBtn:hover {
-	cursor: pointer;
-}
-
-.bigBtn {
-	width: 140px;
-	height: 40px;
-	border: 0px;
-	border-radius: 5px;
-	background: orange; /* 회색 : rgb(190, 190, 190) */
-	color: white;
-	font-size: 18px;
-	display: inline-block;
-}
-
-.bigBtn:hover {
-	cursor: pointer;
-}
-#btnArea {
-	margin-left: 910px;
-}
-
-
-
-.btnDel{
-	color:rgbRGB(65, 125, 122) ;
-}
-
-.deptList{
-	cursor:pointer;
-}
+	@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+	
+	html, body {
+		margin: 0;
+		height: 100%;
+		overflow-x: hidden;
+		overflow-y: auto;
+		font-family: "Nanum Gothic", serif;
+		overflow-x: hidden;
+	}
+	
+	.popup-outer {
+		width: 1250px;
+		height: 860px;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	
+	.popup-title {
+		margin: 0;
+		width: 100%;
+		height: 50px;
+		background-color: RGB(65, 125, 122) ;
+		font-size: 25px;
+		padding: 10px;
+		color: white;
+		box-sizing: border-box;
+	}
+	
+	.popup-content {
+		padding: 20px;
+	}
+	
+	.searchBar {
+		margin-left: 15px;
+	}
+	
+	.searchBar>select {
+		height: 36px;
+		width: 70px;
+		border: 1px solid lightgray;
+		border-radius: 3px;
+		font-family: inherit;
+		display: inline-block;
+	}
+	
+	.searchBar>input {
+		padding: 5px;
+		width: 220px;
+		height: 25px;
+		border: 1px solid lightgray;
+		border-radius: 3px;
+	}
+	
+	.searchBar>svg {
+		fill: rgb(26, 188, 156);
+		width: 37px;
+		display: inline-block;
+		vertical-align: bottom;
+		height: 100%;
+	}
+	
+	.searchBar>svg:hover {
+		cursor: pointer;
+		opacity: 70%;
+	}
+	div {
+		box-sizing: border-box;
+	}
+	
+	#wrap {
+		margin-top: 20px;
+		margin-left: 15px; width : 1200px;
+		height: 700px;
+		width: 1200px;
+	}
+	
+	#wrap>div {
+		float: left;
+		margin-right: 18px;
+	}
+	
+	#groupArea {
+		height: 100%;
+		width: 380px;
+		border: 1px solid lightgray;
+	}
+	
+	.group_tree, .group_tree ul {
+		list-style: none;
+		padding-left: 17px;
+	}
+	
+	.group_tree a {
+		text-decoration: none;
+		color: rgb(77, 77, 77);
+	}
+	
+	.group_tree *::before {
+		width: 17px;
+		height: 15px;
+		display: inline-block;
+	}
+	
+	.group_tree a:before {
+		content: '└';
+		font-family: fontello;
+	}
+	
+	.group_tree label {
+		cursor: pointer;
+	}
+	
+	.group_tree label:before {
+		content: '\E802';
+		font-family: fontello;
+		color: gray;
+	}
+	
+	.group_tree input[type="checkbox"] {
+		display: none;
+	}
+	
+	.group_tree input[type="checkbox"]:checked ~ul{
+		display: none;
+	}
+	
+	.group_tree input[type="checkbox"]:checked+label:before {
+		content: '\E801';
+	}
+	
+	.group_tree ul, .group_tree li {
+		padding-top: 10px;
+		height: 35px;
+	}
+	
+	#listArea {
+		height: 100%;
+		width: 380px;
+		border: 1px solid lightgray;
+	}
+	
+	.checkBox {
+		zoom: 1.7;
+	}
+	
+	.boardTable {
+		width: 100%;
+		height: auto;
+	}
+	
+	.boardTable, .boardTable th, .boardTable td {
+		border-width: 1px 0;
+		border-collapse: collapse;
+		text-align: center;
+		font-size: 15px;
+	}
+	
+	.boardTable th {
+		background-color: #999;
+		color: #fff;
+		height: 35px;
+	}
+	
+	.boardTable td {
+		border-color: lightgray;
+		border-style: solid;
+		height: 35px;
+	}
+	
+	.boardTable tr:hover td {
+		background-color: rgb(224, 224, 224);
+		cursor: pointer;
+	}
+	
+	
+	#selectArea {
+		height: 100%;
+		width: 380px;	
+	}
+	
+	#selectArea>div {
+		width: 100%;
+		height: 50%;	
+	}
+	#selectArea>div>div{border: 1px solid lightgray;}
+	
+	.smallBtn {
+		width: 60px;
+		height: 25px;
+		border: 0px;
+		border-radius: 5px;
+		background: RGB(65, 125, 122) ; /* 회색 : rgb(190, 190, 190) */
+		color: white;
+		font-size: 12px;
+	}
+	
+	.middleBtn {
+		width: 90px;
+		height: 35px;
+		border: 0px;
+		border-radius: 5px;
+		background: RGB(65, 125, 122) ; /* 회색 : rgb(190, 190, 190) */
+		color: white;
+		font-size: 15px;
+	}
+	
+	.middleBtn:hover {
+		cursor: pointer;
+	}
+	
+	.bigBtn {
+		width: 140px;
+		height: 40px;
+		border: 0px;
+		border-radius: 5px;
+		background: orange; /* 회색 : rgb(190, 190, 190) */
+		color: white;
+		font-size: 18px;
+		display: inline-block;
+	}
+	
+	.bigBtn:hover {
+		cursor: pointer;
+	}
+	#btnArea {
+		margin-left: 910px;
+	}
+	
+	
+	
+	.btnDel{
+		color:rgbRGB(65, 125, 122) ;
+	}
+	
+	.deptList{
+		cursor:pointer;
+	}
 </style>
 </head>
 
 <body>
-
-
 	<div class="popup-outer">
 		<div class="popup-title">주소록</div>
 		<div class="popup-content">
@@ -297,11 +295,6 @@ div {
 							opener.document.getElementById("n1").value=n1 + "@smartdoctor.com";
 						}						
 						
-				
-						
-						
-						
-						
 						
 						//선택자 아이디 배열에 담기
 						var signerId=new Array();
@@ -320,8 +313,6 @@ div {
 						
 						opener.getSid(signerId);
 						opener.getSname(signerName);
-						
-						
 						
 						
 						// 참조자 쪽

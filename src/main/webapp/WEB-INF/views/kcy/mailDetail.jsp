@@ -10,7 +10,7 @@
 <title>Smart Doctor</title>
 <link rel="icon" type="image/png" sizes="16x16" href="resources/images/favicon-16x16.png">
 <style>
-.wrap11 {
+	.wrap11 {
 		width: 100%;
 		background-color: white;
 		border-radius: 30px 10px;
@@ -18,11 +18,6 @@
 		text-align: center;
 		height: 100%;
 	}
- 
-
-
-
-
     
     .contentArea {
        margin:auto;
@@ -124,31 +119,31 @@
 	}
 
 
-.fileTable {
-	text-align:left;
-}
-.fileTable tr:nth-child(1) td:nth-child(1) b {
-	margin-left:1px;
-}
-.fileTable tr:nth-child(1) td:nth-child(2) {
-	width:25px;
-}
-.fileTable tr:nth-child(1) td:nth-child(2) img {
-	margin-left:-10px;
-	margin-top:8px;
-}
-.fileShow:hover {
-	cursor:pointer;
-}
-.pageNoClick{
-   pointer-events: none;
-    cursor: default;
-}
-.wrap2{
-		width:95%;
-		text-align : left;
-		margin:auto;
+	.fileTable {
+		text-align:left;
 	}
+	.fileTable tr:nth-child(1) td:nth-child(1) b {
+		margin-left:1px;
+	}
+	.fileTable tr:nth-child(1) td:nth-child(2) {
+		width:25px;
+	}
+	.fileTable tr:nth-child(1) td:nth-child(2) img {
+		margin-left:-10px;
+		margin-top:8px;
+	}
+	.fileShow:hover {
+		cursor:pointer;
+	}
+	.pageNoClick{
+	   pointer-events: none;
+	    cursor: default;
+	}
+	.wrap2{
+			width:95%;
+			text-align : left;
+			margin:auto;
+		}
 </style>   
 </head>
 <body>
@@ -227,13 +222,11 @@
 						</tr>
 						<tr>
 							<td colspan="8">
-										
-								            <table id="fileListTable" width="100%" border="0px">
-								                <tbody id="fileTableTbody">
-								               
-								                </tbody>
-								            </table>
-								        
+					            <table id="fileListTable" width="100%" border="0px">
+					                <tbody id="fileTableTbody">
+					               
+					                </tbody>
+					            </table>
 							</td>
 						</tr>
 					</table>
@@ -249,11 +242,8 @@
 				<div style="height:1px;"></div>
 				<hr>
 				</div>
-				
-				
 			</div>
 			<br><br>
-			
 			
 			<br><br><br><br>
 		</div>

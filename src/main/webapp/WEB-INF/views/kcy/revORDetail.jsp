@@ -112,9 +112,6 @@ th {
 
 </head>
 <body>
-
-	
-				
 	<div class="modal-body">
 		<div class="wrap112">
 
@@ -198,12 +195,5 @@ th {
 			</div>
 		</div>
 	</div>
-			
-		
-	
-
-
-
-
 </body>
 </html>

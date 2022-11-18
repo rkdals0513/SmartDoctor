@@ -181,7 +181,6 @@ $(".chat").click(function(){
 	
 })
 
-//		http://localhost:8421/spring/echolist
 let sock = new SockJS("<c:url value="/echolist"/>");
 	sock.onmessage = onMessage;
 	

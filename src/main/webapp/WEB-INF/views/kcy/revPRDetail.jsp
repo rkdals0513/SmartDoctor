@@ -146,7 +146,7 @@ th {
 						<tr>
 							<th>수진자명</th>
 							<td><input name="patientName" type="text" style="width: 300px;" readonly
-								value="박보검"></td>
+								value="${ c.patientName }"></td>
 						</tr>
 						<tr>
 							<th>입원실</th>
@@ -167,13 +167,13 @@ th {
 						<tr>
 							<th>담당의</th>
 							<td><input type="text" style="width: 300px;" readOnly
-								value="이익준" name="docName"></td>
+								value="{c.docName}" name="docName"></td>
 						</tr>
 						<tr>
 							<th>특이사항</th>
 							<td><textarea
 									style="width: 300px; height: 100px; resize: none;"
-									name="memo" readonly>경과에 따라 입원 기간이 연장 될 있음</textarea></td>
+									name="memo" readonly>${c.memo }</textarea></td>
 						</tr>
 
 

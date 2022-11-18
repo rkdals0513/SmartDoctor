@@ -176,62 +176,7 @@
     	align-items: center;
  	}
      
-    /* .SearchList{
-    	width: 100%;
-	    height: 69%;
-	    overflow: hidden;
-	    overflow-y: scroll;
-    }
-    .SearchList::-webkit-scrollbar {
-    	display:none;
-    }
     
-    .SearchMemberList {
-		height: 20%;
-		display:flex;
-		position: relative;
-	}
-	
-	.SearchMemberList:hover > div:nth-child(2) > div {
-		opacity: 1;
-		transition-duration: 0.3s;
-	}
-	
- 	.SearchMemberList > div:nth-child(1) {
- 		
-	    width: 10%;
-	    height: 100%;
-	    background-color: yellow;
-	    display: flex;
-	    align-items: center;
-	    justify-content: center;
-
- 	}
- 	.plus-btn {
- 		width: 40px;
- 		height: 40px;
- 		display:flex;
- 		justify-content: center;
- 		align-items: center;
- 		font-size: 60px;
- 		border-radius: 50%;
- 		border: 3px solid blue;
- 		color: blue; */
- 
- 		/* 위치지정 */
- 		/* position:absolute;
- 		right: 5%;
- 	}
- 	
- 	.plus-btn > div {
- 		margin-top: -15px;
- 	}
-    .SearchList > div:nth-child(2) {
-	    display: flex;
-	    align-items: center;
-	    font-size: 20px;
-	    font-weight: 500;
- 	} */
     
     .material-icons {
     	font-size: 33px;
@@ -395,29 +340,7 @@
 		
 	})
 	
-	//친구 삭제하기
-	$(function(){
-		$(".deletebtn").click(function(){
-			var id = $(this).siblings(".userid").val();
-			
-			if(confirm("정말로 삭제하시겠습니까?")){
-				location.href="deletefriend.do?empNo="+id;
-			}else{
-				
-				return false;
-			}
-			
-		})
-	})
-
-	//enter키로 친구검색하기
-		$("#membername").keypress(function(event){
-			if(event.which == 13){//13 은 enter키이다.
-				$("#memberListSearch").click();
-				return false;
-			}
-		});
-		
+	
 	
 	//친구리스트 보여주기	
 		$("#memberListSearch").click(function(){
@@ -425,7 +348,6 @@
 			$(".List").hide();	
 			$(".SearchList").show();	//친구 리스트 보여줌.
 			$(".recommendList").hide();
-			//ajax			
 			$.ajax({
 				url:"selectMember.do",
 				data:{name:name},
@@ -482,58 +404,42 @@
 			
 		});
 		
-		
-
-		
-
-	
-	//친구 추가
-	$(document).on("click",".plus-btn",function(){
-		var id = $(this).next().val();
-
-		location.href="insertFriendList.do?empNo=" + id;
-		
-	})
-	
-
-	
 </script>
-
 
 <script>
 		$(document).ready(function() {
-							// 팝업 창 크기를 HTML 크기에 맞추어 자동으로 크기를 조정하는 함수.
-							var strWidth;
-							var strHeight;
+			// 팝업 창 크기를 HTML 크기에 맞추어 자동으로 크기를 조정하는 함수.
+			var strWidth;
+			var strHeight;
 
-							//innerWidth / innerHeight / outerWidth / outerHeight 지원 브라우저
-							if (window.innerWidth && window.innerHeight
-									&& window.outerWidth && window.outerHeight) {
-								strWidth = $(".popup-outer").outerWidth()
-										+ (window.outerWidth - window.innerWidth);
-								strHeight = $(".popup-outer").outerHeight()
-										+ (window.outerHeight - window.innerHeight);
-							} else {
-								var strDocumentWidth = $(document).outerWidth();
-								var strDocumentHeight = $(document)
-										.outerHeight();
+			//innerWidth / innerHeight / outerWidth / outerHeight 지원 브라우저
+			if (window.innerWidth && window.innerHeight
+					&& window.outerWidth && window.outerHeight) {
+				strWidth = $(".popup-outer").outerWidth()
+						+ (window.outerWidth - window.innerWidth);
+				strHeight = $(".popup-outer").outerHeight()
+						+ (window.outerHeight - window.innerHeight);
+			} else {
+				var strDocumentWidth = $(document).outerWidth();
+				var strDocumentHeight = $(document)
+						.outerHeight();
 
-								window.resizeTo(strDocumentWidth,
-										strDocumentHeight);
+				window.resizeTo(strDocumentWidth,
+						strDocumentHeight);
 
-								var strMenuWidth = strDocumentWidth
-										- $(window).width();
-								var strMenuHeight = strDocumentHeight
-										- $(window).height();
+				var strMenuWidth = strDocumentWidth
+						- $(window).width();
+				var strMenuHeight = strDocumentHeight
+						- $(window).height();
 
-								strWidth = $(".popup-outer").outerWidth()
-										+ strMenuWidth;
-								strHeight = $(".popup-outer").outerHeight()
-										+ strMenuHeight;
-							}
+				strWidth = $(".popup-outer").outerWidth()
+						+ strMenuWidth;
+				strHeight = $(".popup-outer").outerHeight()
+						+ strMenuHeight;
+			}
 
-							//resize
-							window.resizeTo(strWidth, strHeight);
+			//resize
+			window.resizeTo(strWidth, strHeight);
 		});
 	</script>
 </html>

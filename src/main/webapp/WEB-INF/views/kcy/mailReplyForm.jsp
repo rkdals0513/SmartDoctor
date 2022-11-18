@@ -219,120 +219,117 @@
 				<br><br>
 				<p style="font-size: 22px;">
 						메일 &nbsp;|&nbsp; <b>답장쓰기</b>
-					</p>
-					<hr>
-					<br><br><br>
-				
+				</p>
+				<hr>
+				<br><br><br>
 				</div>
-					
-							<form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="get">
-								<table class="mailUpload" id="boardDetail">
-									<tr>
-										<td colspan="2">
-											<div class="left1">
-												<c:choose>
-													<c:when test="${empty e }">
-														<button id="submitBoard" type="button" class="btn1" onclick="uploadFile();" style="width:60px; height:30px; font-size: 0.7em;">
-														보내기<div class="mdi mdi-arrow-right-bold" style="font-size: 1.2em; display: inline-block; color: red;"></div>
-														</button>
-													</c:when>
-													<c:otherwise>
-														<button id="submitBoard" type="button" class="btn1" onclick="updateLoadFile();" style="width:60px; height:30px; font-size: 0.7em;">수정</button>
-													</c:otherwise>
-												</c:choose>
-												<button id="submitBoard" type="button" class="btn1"  onclick="cancleBack();" style="width:60px; height:30px; font-size: 0.7em;">다시쓰기</button>
-												
-												<!-- 시간 남으면 해볼것
-												<button type="button" class="btn1"onClick="javascript:popOpen();" style="width:60px; height:30px; font-size: 0.7em;">미리보기</button>
-												<button type="button" class="btn1" style="width:60px; height:30px; font-size: 0.7em;">임시저장</button>
-												-->
-											</div>
-										</td>
-									</tr>
-									<tr>
-										<th>받는사람</th>
-										<td>
-											<div>
-												<c:choose>
-													<c:when test="${!empty trans}">
-														<input id="n1" type="text" class="inputs" name="mailTo" style="width:950px; float:left;" value="${trans}@smartdoctor.com">
-													</c:when>
-													<c:otherwise>
-														<input id="n1" type="text" class="inputs" name="mailTo" style="width:950px; float:left;">
-													</c:otherwise>
-												</c:choose>
-											</div>
-											<div><input id="m1" type="hidden" class="inputs" name="mailnameTo" ></div>
-										<td><button type="button" class="btn1" onclick="window.open('openSigner.mil','mailAddToList','_blank');">주소록</button></td>
-									</tr>
-									<tr>
-										<th>참조</th>
-										<td>
-											<div><input id="l1" type="text" class="inputs " name="mailWith" style="width:950px; float:left;"></div>
-											<div><input id="i1" type="hidden" class="inputs" name="mailnameWith"></div>
-										</td>
-									</tr>
-									<tr>
-										<th>제목</th>
-										<td colspan="2"><input type="text" class="inputs" name="mailTitle" style="width:1030px;"></td>
-									</tr>
-									<tr>
-										<th>첨부파일 <button type="button" class="mdi mdi-arrow-down btn1 fileShow" style="background-color: lightgray; color: black; width: 25px;"></button>
-											<c:if test="${e.mailAttachment ne null}">
-												※현재 파일 <span><b>${fn:length(mtList)}</b></span>개
-											</c:if></th>
-										<td colspan="2">
-										</td>
-									</tr>
-									<tr>
-										<td></td>
-										<td colspan="2">
-											<div class="fileWrap" style="display:none;">
-												<div class="upload-btn-wrapper">
-													<input type="file" id="input_file" multiple="multiple" style="height: 100%;" />
-													<button class="upload-btn fileShow mdi mdi-file-outline"></button>
-												</div>
-										        <div id="dropZone" style="width: 896px; height: 100px; border: 1px solid lightgray;">
-										            <div id="fileDragDesc">
-										            	<div class="mdi mdi-paperclip" style="display: inline-block;"></div>이곳에 첨부파일을 끌어오세요
-										            </div>
-										            <table id="fileListTable" width="100%" border="0px">
-										                <tbody id="fileTableTbody">
-										                	
-										                </tbody>
-										            </table>
-										        </div>
-										        <input type="hidden" id="bff" name="boardFileFlag" value="${e.mailAttachment }">
-										        <input type="hidden" id="fileListSize" name="fileListSize" value="${fn:length(mtList)}">
-										        <div class="fileNameList" style="display:none;">
-										        	<table class="fnoTable" border="1">
-										        	<tr>
-										        	<c:forEach items="${ mtList }" var="mt">
-										        		<td><input type="hidden" name="fno" value="${mt.attachmentNo}">${mt.attachmentNo}</td>
-										        	</c:forEach>
-										        	</tr>
-										        	</table>
-										        </div>
-									        </div>
-										</td>
-									</tr>
-									<tr>
-										<th>내용</th>
-										<td colspan="2"><textarea class="textArea" rows="25" cols="125" name="mailContent" style="resize:none;"></textarea></td>
-									</tr>
-								</table>
-								<input type="hidden" name="mailnameFrom" value="${ loginUser.empName }">
-								<input type="hidden" name="empNo" value="${ loginUser.empNo }">
-								<input type="hidden" id="mailNo" name="mailNo" value="${e.mailNo }">
-								<div class="ffnos" style="display:none;">
-								<c:forEach items="${ btList }" var="bt">
-									<input type="file" id="ffno" name="ffno" value="">
-								</c:forEach>
-								
-								</div>
-							</form>
-							<br><br><br><br><br>
+					<form name="uploadForm" id="uploadForm" enctype="multipart/form-data" method="get">
+						<table class="mailUpload" id="boardDetail">
+							<tr>
+								<td colspan="2">
+									<div class="left1">
+										<c:choose>
+											<c:when test="${empty e }">
+												<button id="submitBoard" type="button" class="btn1" onclick="uploadFile();" style="width:60px; height:30px; font-size: 0.7em;">
+												보내기<div class="mdi mdi-arrow-right-bold" style="font-size: 1.2em; display: inline-block; color: red;"></div>
+												</button>
+											</c:when>
+											<c:otherwise>
+												<button id="submitBoard" type="button" class="btn1" onclick="updateLoadFile();" style="width:60px; height:30px; font-size: 0.7em;">수정</button>
+											</c:otherwise>
+										</c:choose>
+										<button id="submitBoard" type="button" class="btn1"  onclick="cancleBack();" style="width:60px; height:30px; font-size: 0.7em;">다시쓰기</button>
+										
+										<!-- 시간 남으면 해볼것
+										<button type="button" class="btn1"onClick="javascript:popOpen();" style="width:60px; height:30px; font-size: 0.7em;">미리보기</button>
+										<button type="button" class="btn1" style="width:60px; height:30px; font-size: 0.7em;">임시저장</button>
+										-->
+									</div>
+								</td>
+							</tr>
+							<tr>
+								<th>받는사람</th>
+								<td>
+									<div>
+										<c:choose>
+											<c:when test="${!empty trans}">
+												<input id="n1" type="text" class="inputs" name="mailTo" style="width:950px; float:left;" value="${trans}@smartdoctor.com">
+											</c:when>
+											<c:otherwise>
+												<input id="n1" type="text" class="inputs" name="mailTo" style="width:950px; float:left;">
+											</c:otherwise>
+										</c:choose>
+									</div>
+									<div><input id="m1" type="hidden" class="inputs" name="mailnameTo" ></div>
+								<td><button type="button" class="btn1" onclick="window.open('openSigner.mil','mailAddToList','_blank');">주소록</button></td>
+							</tr>
+							<tr>
+								<th>참조</th>
+								<td>
+									<div><input id="l1" type="text" class="inputs " name="mailWith" style="width:950px; float:left;"></div>
+									<div><input id="i1" type="hidden" class="inputs" name="mailnameWith"></div>
+								</td>
+							</tr>
+							<tr>
+								<th>제목</th>
+								<td colspan="2"><input type="text" class="inputs" name="mailTitle" style="width:1030px;"></td>
+							</tr>
+							<tr>
+								<th>첨부파일 <button type="button" class="mdi mdi-arrow-down btn1 fileShow" style="background-color: lightgray; color: black; width: 25px;"></button>
+									<c:if test="${e.mailAttachment ne null}">
+										※현재 파일 <span><b>${fn:length(mtList)}</b></span>개
+									</c:if></th>
+								<td colspan="2">
+								</td>
+							</tr>
+							<tr>
+								<td></td>
+								<td colspan="2">
+									<div class="fileWrap" style="display:none;">
+										<div class="upload-btn-wrapper">
+											<input type="file" id="input_file" multiple="multiple" style="height: 100%;" />
+											<button class="upload-btn fileShow mdi mdi-file-outline"></button>
+										</div>
+								        <div id="dropZone" style="width: 896px; height: 100px; border: 1px solid lightgray;">
+								            <div id="fileDragDesc">
+								            	<div class="mdi mdi-paperclip" style="display: inline-block;"></div>이곳에 첨부파일을 끌어오세요
+								            </div>
+								            <table id="fileListTable" width="100%" border="0px">
+								                <tbody id="fileTableTbody">
+								                	
+								                </tbody>
+								            </table>
+								        </div>
+								        <input type="hidden" id="bff" name="boardFileFlag" value="${e.mailAttachment }">
+								        <input type="hidden" id="fileListSize" name="fileListSize" value="${fn:length(mtList)}">
+								        <div class="fileNameList" style="display:none;">
+								        	<table class="fnoTable" border="1">
+								        	<tr>
+								        	<c:forEach items="${ mtList }" var="mt">
+								        		<td><input type="hidden" name="fno" value="${mt.attachmentNo}">${mt.attachmentNo}</td>
+								        	</c:forEach>
+								        	</tr>
+								        	</table>
+								        </div>
+							        </div>
+								</td>
+							</tr>
+							<tr>
+								<th>내용</th>
+								<td colspan="2"><textarea class="textArea" rows="25" cols="125" name="mailContent" style="resize:none;"></textarea></td>
+							</tr>
+						</table>
+						<input type="hidden" name="mailnameFrom" value="${ loginUser.empName }">
+						<input type="hidden" name="empNo" value="${ loginUser.empNo }">
+						<input type="hidden" id="mailNo" name="mailNo" value="${e.mailNo }">
+						<div class="ffnos" style="display:none;">
+						<c:forEach items="${ btList }" var="bt">
+							<input type="file" id="ffno" name="ffno" value="">
+						</c:forEach>
 						
+						</div>
+					</form>
+					<br><br><br><br><br>
 				</div>
 			</div>
 		<jsp:include page="../common/footer.jsp" />

@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-    <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>  
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -298,65 +298,65 @@
 		</div>
 	</div>
 		
-<div class="big-area">
-	<div class="chat-area">
-	<c:forEach var="cl" items="${chlist }">
-		<c:if test="${cl.id eq loginUser.empNo }">
-			<div id="chatdata">
-				<c:if test="${!empty cl.ol_img}">
-					<c:if test="${fn:contains(cl.ol_img,'jpg') || fn:contains(cl.ol_img,'png') || fn:contains(cl.ol_img,'jpeg') || fn:contains(cl.ol_img,'bmp')
-					 				|| fn:contains(cl.ol_img,'gif')|| fn:contains(cl.ol_img,'JPG') || fn:contains(cl.ol_img,'PNG') || fn:contains(cl.ol_img,'JPEG') || fn:contains(cl.ol_img,'BMP')
-					 				|| fn:contains(cl.ol_img,'GIF')}">
-					 	<div class="text-con"><img src='resources/cuploadFiles/${cl.ol_img }' class='img-message'></div>
-					 				</c:if>
-					 <c:if test="${!(fn:contains(cl.ol_img,'jpg') || fn:contains(cl.ol_img,'png') || fn:contains(cl.ol_img,'jpeg') || fn:contains(cl.ol_img,'bmp')
-					 				|| fn:contains(cl.ol_img,'gif') || fn:contains(cl.ol_img,'JPG') || fn:contains(cl.ol_img,'PNG') || fn:contains(cl.ol_img,'JPEG') || fn:contains(cl.ol_img,'BMP')
-					 				|| fn:contains(cl.ol_img,'GIF'))}">					 				
-					 	<div class="text-con"><a class='downloadmsg' href='resources/cuploadFiles/${cl.ol_img }' download><span class='material-icons' style='width: 100%; height: 100%; font-size: 50px; color:#2860E1;'>save</span></a></div>
-					 				</c:if>
-				</c:if>
-				<c:if test="${empty cl.ol_img}">
-					<div class="text-con"><span>${cl.ol_cont }</span></div>
-				</c:if>
-				<div class="tri-left"></div>
-				
-			</div>
-		</c:if>
-		<c:if test="${cl.id ne loginUser.empNo }">
-			 <c:if test="${cl.ol_yn eq 'N'}">
-				<div id="ol_yn"></div>
-			 </c:if>
-		<div id="chatdata" class="left">	<!--  받는사람한테 class="left" 추가 -->
-			
-			
-			<div class="tri-right"></div>
-			<div class="text-con-area">
-				<div>${cl.name }</div>
-				<div class="text-con-someone">
-					<c:if test="${!empty cl.ol_img }">
+	<div class="big-area">
+		<div class="chat-area">
+		<c:forEach var="cl" items="${chlist }">
+			<c:if test="${cl.id eq loginUser.empNo }">
+				<div id="chatdata">
+					<c:if test="${!empty cl.ol_img}">
 						<c:if test="${fn:contains(cl.ol_img,'jpg') || fn:contains(cl.ol_img,'png') || fn:contains(cl.ol_img,'jpeg') || fn:contains(cl.ol_img,'bmp')
-					 				|| fn:contains(cl.ol_img,'gif') || fn:contains(cl.ol_img,'JPG') || fn:contains(cl.ol_img,'PNG') || fn:contains(cl.ol_img,'JPEG') || fn:contains(cl.ol_img,'BMP')
-					 				|| fn:contains(cl.ol_img,'GIF')}">
-					 			<img src='resources/cuploadFiles/${cl.ol_img }' class='img-message'>			
-					 	</c:if>
-						<c:if test="${!(fn:contains(cl.ol_img,'jpg') || fn:contains(cl.ol_img,'png') || fn:contains(cl.ol_img,'jpeg') || fn:contains(cl.ol_img,'bmp')
-					 				|| fn:contains(cl.ol_img,'gif') || fn:contains(cl.ol_img,'JPG') || fn:contains(cl.ol_img,'PNG') || fn:contains(cl.ol_img,'JPEG') || fn:contains(cl.ol_img,'BMP')
-					 				|| fn:contains(cl.ol_img,'GIF'))}">	
-					 			<a class='downloadmsg' href='resources/cuploadFiles/${cl.ol_img }' download><span class='material-icons' style='width: 100%; height: 100%; font-size: 50px; color: #2860E1;'>save</span></a>
-					 	</c:if>
+						 				|| fn:contains(cl.ol_img,'gif')|| fn:contains(cl.ol_img,'JPG') || fn:contains(cl.ol_img,'PNG') || fn:contains(cl.ol_img,'JPEG') || fn:contains(cl.ol_img,'BMP')
+						 				|| fn:contains(cl.ol_img,'GIF')}">
+						 	<div class="text-con"><img src='resources/cuploadFiles/${cl.ol_img }' class='img-message'></div>
+						 				</c:if>
+						 <c:if test="${!(fn:contains(cl.ol_img,'jpg') || fn:contains(cl.ol_img,'png') || fn:contains(cl.ol_img,'jpeg') || fn:contains(cl.ol_img,'bmp')
+						 				|| fn:contains(cl.ol_img,'gif') || fn:contains(cl.ol_img,'JPG') || fn:contains(cl.ol_img,'PNG') || fn:contains(cl.ol_img,'JPEG') || fn:contains(cl.ol_img,'BMP')
+						 				|| fn:contains(cl.ol_img,'GIF'))}">					 				
+						 	<div class="text-con"><a class='downloadmsg' href='resources/cuploadFiles/${cl.ol_img }' download><span class='material-icons' style='width: 100%; height: 100%; font-size: 50px; color:#2860E1;'>save</span></a></div>
+						 				</c:if>
 					</c:if>
-					<c:if test="${empty cl.ol_img }">
-						${cl.ol_cont }
+					<c:if test="${empty cl.ol_img}">
+						<div class="text-con"><span>${cl.ol_cont }</span></div>
 					</c:if>
+					<div class="tri-left"></div>
+					
+				</div>
+			</c:if>
+			<c:if test="${cl.id ne loginUser.empNo }">
+				 <c:if test="${cl.ol_yn eq 'N'}">
+					<div id="ol_yn"></div>
+				 </c:if>
+			<div id="chatdata" class="left">	<!--  받는사람한테 class="left" 추가 -->
+				
+				
+				<div class="tri-right"></div>
+				<div class="text-con-area">
+					<div>${cl.name }</div>
+					<div class="text-con-someone">
+						<c:if test="${!empty cl.ol_img }">
+							<c:if test="${fn:contains(cl.ol_img,'jpg') || fn:contains(cl.ol_img,'png') || fn:contains(cl.ol_img,'jpeg') || fn:contains(cl.ol_img,'bmp')
+						 				|| fn:contains(cl.ol_img,'gif') || fn:contains(cl.ol_img,'JPG') || fn:contains(cl.ol_img,'PNG') || fn:contains(cl.ol_img,'JPEG') || fn:contains(cl.ol_img,'BMP')
+						 				|| fn:contains(cl.ol_img,'GIF')}">
+						 			<img src='resources/cuploadFiles/${cl.ol_img }' class='img-message'>			
+						 	</c:if>
+							<c:if test="${!(fn:contains(cl.ol_img,'jpg') || fn:contains(cl.ol_img,'png') || fn:contains(cl.ol_img,'jpeg') || fn:contains(cl.ol_img,'bmp')
+						 				|| fn:contains(cl.ol_img,'gif') || fn:contains(cl.ol_img,'JPG') || fn:contains(cl.ol_img,'PNG') || fn:contains(cl.ol_img,'JPEG') || fn:contains(cl.ol_img,'BMP')
+						 				|| fn:contains(cl.ol_img,'GIF'))}">	
+						 			<a class='downloadmsg' href='resources/cuploadFiles/${cl.ol_img }' download><span class='material-icons' style='width: 100%; height: 100%; font-size: 50px; color: #2860E1;'>save</span></a>
+						 	</c:if>
+						</c:if>
+						<c:if test="${empty cl.ol_img }">
+							${cl.ol_cont }
+						</c:if>
+					</div>
 				</div>
 			</div>
+			
+			</c:if>
+		</c:forEach>
+			
 		</div>
-		
-		</c:if>
-	</c:forEach>
-		
 	</div>
-</div>
 
 
 	<div class="send-area">
@@ -377,22 +377,17 @@
 	
 	
 	<div class="modal fade" id="modal">
-	<div class="modal-dialog">
-	 	<div class="modal-content modal-area">
-			<div class="modal-preview">
-				<!-- <img id="modal-img" height="110%"> -->
-			</div>
-			<div class="button-area" style="margin-top: 10px;">
-				<button class="default-btn b-yell transfer" style="height:40px !important; margin:0;">전송하기</button>
-			</div>
-	 	</div>
+		<div class="modal-dialog">
+		 	<div class="modal-content modal-area">
+				<div class="modal-preview">
+					<!-- <img id="modal-img" height="110%"> -->
+				</div>
+				<div class="button-area" style="margin-top: 10px;">
+					<button class="default-btn b-yell transfer" style="height:40px !important; margin:0;">전송하기</button>
+				</div>
+		 	</div>
+		</div>
 	</div>
-</div>
-	
-	
-	
-	
-	
 </body>
 
 
@@ -400,52 +395,50 @@
 	var imgname;
 
 	//파일 업로드
-		    function uploadPhoto(value) {
+    function uploadPhoto(value) {
 		    	 
-			if(value.files && value.files[0]) {
+	if(value.files && value.files[0]) {
 				
-				var reader = new FileReader();
+		var reader = new FileReader();
+	
+		reader.onload = function(e) {
+		var filename = $("#file_transfer").val().split('/').pop().split('\\').pop();
+	
+		
+		console.log("filename : " + filename)
+		if((filename.indexOf("jpg") != -1) || (filename.indexOf("png") != -1)
+				|| (filename.indexOf("jpeg") != -1) || (filename.indexOf("bmp") != -1)
+				|| (filename.indexOf("gif") != -1) || (filename.indexOf("JPG") != -1) || (filename.indexOf("PNG") != -1)
+				|| (filename.indexOf("JPEG") != -1) || (filename.indexOf("BMP") != -1)
+				|| (filename.indexOf("GIF") != -1)){
 			
-				reader.onload = function(e) {
-					var filename = $("#file_transfer").val().split('/').pop().split('\\').pop();
-				
-					
-					console.log("filename : " + filename)
-					if((filename.indexOf("jpg") != -1) || (filename.indexOf("png") != -1)
-							|| (filename.indexOf("jpeg") != -1) || (filename.indexOf("bmp") != -1)
-							|| (filename.indexOf("gif") != -1) || (filename.indexOf("JPG") != -1) || (filename.indexOf("PNG") != -1)
-							|| (filename.indexOf("JPEG") != -1) || (filename.indexOf("BMP") != -1)
-							|| (filename.indexOf("GIF") != -1)){
-						
-						var $printHTML;
-						printHTML ="<img id='modal-img' height='110%'>"
-							$(".modal-preview").html('');
-						
-						$(".modal-preview").append(printHTML);
-						$("#modal-img").attr("src", e.target.result);
-					}else{
-						$("#modal-img").attr("display", "none");
-						var $printHTML;
-						printHTML = "<span class='material-icons' style='width: 100%; height: 100%; font-size: 150px; color: white; background-color: #2860E1;'>save</span>"
-							$(".modal-preview").html('');
-						$(".modal-preview").append(printHTML);
-					}
-					
-					//chk
-					
-					var filename = $("#file_transfer").val().split('/').pop().split('\\').pop();
-				
-					//$(".upload-name").val("");
-					//$(".upload-name").val(filename);
-				}
-				//jpg ,png, jpeg ,bmp,gif
-				reader.readAsDataURL(value.files[0]);
-			}
+			var $printHTML;
+			printHTML ="<img id='modal-img' height='110%'>"
+				$(".modal-preview").html('');
 			
-			
-			
-			$("#modal").modal();
-	    }
+			$(".modal-preview").append(printHTML);
+			$("#modal-img").attr("src", e.target.result);
+		}else{
+			$("#modal-img").attr("display", "none");
+			var $printHTML;
+			printHTML = "<span class='material-icons' style='width: 100%; height: 100%; font-size: 150px; color: white; background-color: #2860E1;'>save</span>"
+				$(".modal-preview").html('');
+			$(".modal-preview").append(printHTML);
+		}
+		
+		//chk
+		
+		var filename = $("#file_transfer").val().split('/').pop().split('\\').pop();
+	
+		//$(".upload-name").val("");
+		//$(".upload-name").val(filename);
+		}
+		//jpg ,png, jpeg ,bmp,gif
+		reader.readAsDataURL(value.files[0]);
+		}
+		
+		$("#modal").modal();
+	}
 	
 	//스크롤 위치고정.
 	$(document).ready(function() {
@@ -567,7 +560,7 @@
 			img : "${loginUser.path}"
 		};
 		
-		var jsonData = JSON.stringify(msgData);//JSON.stringify란 자바스크립트의 값을 JSON 문자열로 변환한다. 
+		var jsonData = JSON.stringify(msgData);
 		sock.send(jsonData);
 		var msgData2 ={
 				friendid : $("#friendid").val(),
@@ -584,8 +577,7 @@
 		
 	}          
 	
-	//evt 파라미터는 websocket이 보내준 데이터다.
-	function onMessage(evt){  //변수 안에 function자체를 넣음.
+	function onMessage(evt){  
 		var data = evt.data;
 		var sessionid = null;
 		var message = null;
@@ -596,7 +588,6 @@
 			allcount(data);
 			return;
 		}
-		//문자열을 splite//
 		 var strArray = data.split('|'); 
 		
 
@@ -605,18 +596,15 @@
 			return;
 		}
 		
-		//current session id//
 		var currentuser_session = $("#loginuser").val();
 
 		var current_co_no = $("#co_no").val();
 		
-		//String jsonStr2 = co_no + "|" +loginid+ "|" + mapReceive.get("msg");	
 		co_no = strArray[0];
 		sessionid = strArray[1]; //현재 메세지를 보낸 사람의 세션 등록//
 		message = strArray[2]; //현재 메세지를 저장//
 		img = strArray[3];	//이미지
 		var $printHTML;
-		//나와 상대방이 보낸 메세지를 구분하여 영역을 나눈다.//
 		if(sessionid == currentuser_session){
 			var check ="${loginUser.path}";
 			if(check == ""){
@@ -687,14 +675,13 @@
 	
 	
 	function imgMessage(strArray){
-		//current session id//
 		var currentuser_session = $("#loginuser").val();
 
 		var current_co_no = $("#co_no").val();
 
 		
 		co_no = strArray[0];
-		sessionid = strArray[1]; //현재 메세지를 보낸 사람의 세션 등록//
+		sessionid = strArray[1]; 
 		message = strArray[2]; //현재 메세지를 저장//
 		img = strArray[3];	//이미지
 		filename = strArray[4];
