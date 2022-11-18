@@ -491,16 +491,16 @@
 				// ---------- form에 넘길 요소 ------------ //
 					
 				let apprTotal = $("#apprLine").children(".ap-md-bd").length;
-				$("input[name=apprTotal]").attr('value', apprTotal); // 총결재자수
+				$("#insertAppr").append("<input type='hidden' value='" + apprTotal + "' name='apprTotal'>"); // 총결재자수
 				
 				$("#apprLine").children(".ap-md-bd").each(function(index, item){ // 결재자들 
-					$("#insertAppr").append("<input type='hidden' value='" + $(item).children('.empId').text() + "' name='lineList[" + index + "].empNo'>");
+					$("#insertAppr").append("<input type='hidden' class='line' value='" + $(item).children('.empId').text() + "' name='lineList[" + index + "].empNo'>");
 				})
 				
 				$("#apprRef").children(".ap-md-bd").each(function(index, item){ // 참조자들
-					$("#insertAppr").append("<input type='hidden' value='" + $(item).children('.empId').text() + "' name='RefList[" + index + "].empNo'>");
+					$("#insertAppr").append("<input type='hidden' class='ref' value='" + $(item).children('.empId').text() + "' name='RefList[" + index + "].empNo'>");
 				})
-				
+				  
 			})	
 		
 			function selectLineList(){ // 결재라인 조직도 출력용 함수
@@ -622,9 +622,6 @@
 				
 				$("#appr-line").off('click').on('click', function(){ // 결재자
 					
-					console.log($(".empId").text());
-					console.log(member.empNo);
-					
 					if( $(".empId").text() == member.empNo ){ // 동일한 사원 선택 제한
 						
 						alert("중복된 대상입니다.");
@@ -672,14 +669,19 @@
 			function selectedApprLine(){ // 결재라인 지정 '선택하기' 버튼 클릭시 form에 넘길 요소
 				
 				let apprTotal = $("#apprLine").children(".ap-md-bd").length;
-				$("#insertAppr").append("<input type='hidden' value='" + apprTotal + "' name='apprTotal'>"); // 총결재자수
+				$("input[name=apprTotal]").attr('value', apprTotal); // 총결재자수
 				
-				$("#apprLine").children(".ap-md-bd").each(function(index, item){ // 결재자들 
-					$("#insertAppr").append("<input type='hidden' value='" + $(item).children('.empId').text() + "' name='lineList[" + index + "].empNo'>")
+				// 이미 넘겨준 결재자, 참조자 삭제
+				$(".line").remove();
+				$(".ref").remove();
+				
+				// 결재자, 참조자 index 다시 부여
+				$("#apprLine").children(".ap-md-bd").each(function(index, item){ 
+					$("#insertAppr").append("<input type='hidden' class='line' value='" + $(item).children('.empId').text() + "' name='lineList[" + index + "].empNo'>");
 				})
 				
-				$("#apprRef").children(".ap-md-bd").each(function(index, item){ // 참조자들
-					$("#insertAppr").append("<input type='hidden' value='" + $(item).children('.empId').text() + "' name='RefList[" + index + "].empNo'>")
+				$("#apprRef").children(".ap-md-bd").each(function(index, item){ 
+					$("#insertAppr").append("<input type='hidden' class='ref' value='" + $(item).children('.empId').text() + "' name='RefList[" + index + "].empNo'>");
 				})
 				
 				$('#lineModal').modal('hide');
