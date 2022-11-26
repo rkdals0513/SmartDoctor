@@ -35,7 +35,7 @@ public class oneToOneChatHandler extends TextWebSocketHandler {
 	
 	  @Autowired ChatService cService;
 	 
-	//세션저장 ("co_no",co_no),("session",세션) - ...
+	  	//세션저장 ("co_no",co_no),("session",세션) - ...
 		private List<Map<String,Object>> sessionList = new ArrayList<Map<String, Object>>();
 		
 		private static Logger logger = LoggerFactory.getLogger(oneToOneChatHandler.class);

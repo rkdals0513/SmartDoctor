@@ -306,24 +306,30 @@
 									<c:when test="${fn:length(list) eq 10}">
 										<c:forEach items="${ list }" var="b">
 											<tr>
-												<td><label> <input class="checkbox chk"
+												<td><label> 
+														<input class="checkbox chk"
 														type="checkbox" name="chk" value=""
 														style="vertical-align: middle; transform: scale(1.5);">
 														<input class="mailNo" type="hidden" name="mailNo"
 														value="${b.mailNo}">
-												</label></td>
-												<td><c:choose>
+													</label>
+												</td>
+												<td>
+													<c:choose>
 														<c:when test="${b.mailImportFlag eq 'Y' }">
-															<label><input type="checkbox" class="importbox"
-																name="ichk"><img
-																src="resources/images/star-black-48dp.svg"></label>
+															<label>
+																<input type="checkbox" class="importbox" name="ichk">
+																<img src="resources/images/star-black-48dp.svg">
+															</label>
 														</c:when>
 														<c:otherwise>
-															<label><input type="checkbox" class="importbox"
-																name="ichk"><img
-																src="resources/images/star_border-black-48dp.svg"></label>
+															<label>
+																<input type="checkbox" class="importbox"name="ichk">
+																<img src="resources/images/star_border-black-48dp.svg">
+															</label>
 														</c:otherwise>
-													</c:choose></td>
+													</c:choose>
+												</td>
 												<td><span
 													data-tooltip-text="${b.mailTo }@smartdoctor.com">${b.mailnameTo }</span></td>
 												<td><span

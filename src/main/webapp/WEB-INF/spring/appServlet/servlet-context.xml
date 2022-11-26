@@ -67,7 +67,6 @@
 	 -->
 	 
 	<websocket:handlers allowed-origins="http://192.168.0.13:8889, http://localhost:8889, http://192.168.9.7:8889">
-		<websocket:mapping handler="openChatHandler" path="/echoroom"/>
 		<websocket:mapping handler="oneToOneChatHandler" path="/echo"/>
 		<websocket:mapping handler="oneToOneChatlistHandler" path="/echolist"/>
 		<websocket:mapping handler="chatAllCountHandler" path="/allcountecho"/>
@@ -80,10 +79,7 @@
 	
 	<beans:bean id="oneToOneChatHandler"
 		class="com.fp.smartDoctor.chat.handler.oneToOneChatHandler"/>
-	
-	<beans:bean id="openChatHandler"
-		class="com.fp.smartDoctor.chat.handler.openChatHandler">
-	</beans:bean>
+
 	
 	<beans:bean id="oneToOneChatlistHandler"
 		class="com.fp.smartDoctor.chat.handler.oneToOneChatlistHandler">

@@ -511,7 +511,8 @@
 	                 // 확장자 체크
 	                 alert("등록 불가 확장자");
 	                 break; */
-	             if ($.inArray(ext, [ 'hwp', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt', 'pdf','PNG', 'png', 'jpeg', 'gif', 'zip','jpg','JPG' ]) <= 0) {
+	             if ($.inArray(ext, [ 'hwp', 'doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'txt', 'pdf','PNG', 
+	            	 'png', 'jpeg', 'gif', 'zip','jpg','JPG' ]) <= 0) {
 	                 // 확장자 체크
 	                 /* alert("등록이 불가능한 파일 입니다.");
 	                 break; */
@@ -553,7 +554,8 @@
 	     html += "    <td id='dropZone' class='left' >";
 	     html += fileName + " (" + fileSizeStr +") " 
 	             //+ "<a href='#' onclick='deleteFile(" + fIndex + "); return false;' class='btn small bg_02'> 삭제</a>"
-	             + "<span id='deleteBtn' class='material-icons' onclick='deleteFile(" + fIndex + "); return false;'>highlight_off</span>"
+	             + "<span id='deleteBtn' class='material-icons' onclick='deleteFile(" 
+	            		 + fIndex + "); return false;'>highlight_off</span>"
 	     html += "    </td>"
 	     html += "</tr>"
 	

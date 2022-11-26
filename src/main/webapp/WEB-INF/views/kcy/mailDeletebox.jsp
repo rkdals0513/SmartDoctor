@@ -273,15 +273,14 @@
 
 							<div style="height: 10px;"></div>
 							<!-- 메일함 -->
-							<table class="boardTable mailTable"
-								style="border: 0px solid white;">
+							<table class="boardTable mailTable" style="border: 0px solid white;">
 								<thead>
 									<tr>
 										<th width="80">
 											<div class="">
-												<label><input class="checkbox" type="checkbox"
-													id="checkall" value=""
-													style="vertical-align: middle; transform: scale(1.6);"></label>
+												<label>
+													<input class="checkbox" type="checkbox" id="checkall" value="" style="vertical-align: middle; transform: scale(1.6);">
+												</label>
 											</div>
 										</th>
 

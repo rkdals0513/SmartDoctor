@@ -162,7 +162,7 @@
 		font-size: 12px;
 		content: attr(data-tooltip-text);
 	
-	  margin-bottom: 10px;
+	    margin-bottom: 10px;
 		top: 130%;
 		left: 0;    
 		padding: 7px 12px;
@@ -325,8 +325,7 @@
 																src="resources/images/star_border-black-48dp.svg"></label>
 														</c:otherwise>
 													</c:choose></td>
-												<td><span
-													data-tooltip-text="${b.mailFrom }@smartdoctor.com">${b.mailnameFrom }</span></td>
+												<td><span data-tooltip-text="${b.mailFrom }@smartdoctor.com">${b.mailnameFrom }</span></td>
 												<td>${b.mailTitle }</td>
 												<td>${b.mailDateStr }</td>
 											</tr>
