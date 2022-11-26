@@ -82,6 +82,7 @@
 ![파이널 리드미10](https://user-images.githubusercontent.com/102591871/204098454-6b0ef5f0-3d44-4437-84df-5ffd7139aea5.gif)<br>
 
 - 친구목록, 채팅목록, 첨부파일
+</details>
 
 <details><summary><h3>2. 김민주</h3></summary>
 
@@ -91,6 +92,9 @@
 ### 📌
 ### 📌
 ### 📌
+
+</details>
+
 <details><summary><h3>3. 이주영</h3></summary>
 
 ### 📌 회원가입
