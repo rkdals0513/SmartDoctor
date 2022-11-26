@@ -114,10 +114,10 @@
 ## :star: Document
 
 - 개발 일정 <br><br>
-![image](https://user-images.githubusercontent.com/103404357/188263532-1e33a424-61b8-4808-95e8-a43ad766c110.png) <br>
+![화면 캡처 2022-11-27 012132](https://user-images.githubusercontent.com/102591871/204098655-30bc23bc-2452-4116-8496-10ecb67ba913.jpg)<br>
 
 - 유스케이스 <br><br>
-![image](https://user-images.githubusercontent.com/103404357/188263510-f2a8bdd2-4a65-4423-9458-5d80bb4aaaea.png) <br>
+![UseCaseDiagram2](https://user-images.githubusercontent.com/102591871/204098596-75950274-dc7c-4151-9537-6ec1fc76fc94.jpg) <br>
 
 - DB 설계 <br><br>
-![image](https://user-images.githubusercontent.com/103404357/188263352-44d5320d-e35b-4300-9c4d-176b0831a28a.png) <br>
+![화면 캡처 2022-11-27 012433](https://user-images.githubusercontent.com/102591871/204098709-4b0229d8-d526-4625-8bbd-1950143fb97c.jpg)<br>
