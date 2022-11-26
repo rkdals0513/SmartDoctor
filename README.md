@@ -51,21 +51,19 @@
 ![파이널 리드미3](https://user-images.githubusercontent.com/102591871/204097885-8b555052-08aa-4d4f-baf5-6855b22550f5.gif) <br>
 ![파이널 리드미4](https://user-images.githubusercontent.com/102591871/204097900-6f8033f5-5fe4-404b-a52b-bf6251f1121b.gif) <br>
 
--입원실 수술실 예약 후 풀캘린더에서 상세 조회가능
+-입원실 수술실 예약 후 풀캘린더에서 상세 조회가능<br>
     
 ### 📌 메일
 ![파이널 리드미5](https://user-images.githubusercontent.com/102591871/204097921-f28cf1c3-7bee-4dff-92e3-e66256312b94.gif) <br>
-
 - 메일쓰기 <br>
 
 ![파이널 리드미6](https://user-images.githubusercontent.com/102591871/204097958-5b0906ab-ef54-43af-8a4d-9db7ffcc16a5.gif) <br>
-
--주소록 <br>
+- 주소록 <br>
 
 ![파이널 리드미7](https://user-images.githubusercontent.com/102591871/204097985-d5388c12-4b5f-41a9-81f8-eca0c5916055.gif) <br>
 ![파이널 리드미8](https://user-images.githubusercontent.com/102591871/204097992-d64e1e47-4626-4866-a820-60dd877749a5.gif) <br>
 
--첨부파일<br>
+- 첨부파일<br>
 
 ![파이널 메일함](https://user-images.githubusercontent.com/102591871/204098135-53e12c74-6f4c-4e27-9984-8b6c3db1cfd3.gif) <br>
 
@@ -73,7 +71,7 @@
 
 ![파이널 답장](https://user-images.githubusercontent.com/102591871/204098178-da058c63-f60e-468e-a9de-98b00aac4b89.gif) <br>
 
--받은메일 상세, 받은 메일 답장<br>
+- 받은메일 상세, 받은 메일 답장<br>
 
 
 ### 📌 채팅
