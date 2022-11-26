@@ -79,7 +79,6 @@
 ### 📌 채팅
 ![파이널 리드미11](https://user-images.githubusercontent.com/102591871/204098421-b69ce8aa-01e4-4a09-b4a2-d1ce005f1fd1.gif) <br>
 ![파이널 리드미9](https://user-images.githubusercontent.com/102591871/204098456-1a79c51d-643b-40f3-866e-8ad77b8edf61.gif) <br>
-![파이널 리드미10](https://user-images.githubusercontent.com/102591871/204098454-6b0ef5f0-3d44-4437-84df-5ffd7139aea5.gif)<br>
 
 - 친구목록, 채팅목록, 첨부파일
 </details>
