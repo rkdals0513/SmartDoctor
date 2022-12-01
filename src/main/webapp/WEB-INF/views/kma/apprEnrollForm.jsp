@@ -529,41 +529,23 @@
 					}
 				})
 				
-				$("#appr-line").off('click').on('click', function(){ // 결재자
-					
-					if( $("#apprLine").find(".empId").length){
-						console.log("있음");
-						$(".empId").each(function(index, item){ 
-							
-							if( $(item).text() == member.empNo ){
-								
-								alert("중복된 대상입니다.");
-								$("#appr-line").off('click');
-							}else if( $("#apprLine").children(".ap-md-bd").length > 2 ){ // 3명 이상 선택 제한
-								
-								alert("최대 결재인원은 3명입니다.");
-								$("#appr-line").off('click');
-								
-							}else{ 
-								console.log("있음2");
-								$("#apprLine").append(data);
-							}
-						})
-					}else{
-						console.log("없음");
-						$("#apprLine").append(data);
-					}
-					
-					
-					/* if( $(".empId").text() == member.empNo ){ // 동일한 사원 선택 제한
+        		$("#appr-line").off('click').on('click', function(){ // 결재자
+        			
+					if( $("#apprLine").find(".empId").text() == member.empNo ){ // 동일한 사원 선택 제한
 						
 						alert("중복된 대상입니다.");
 						$("#appr-line").off('click');
 					
-					}else */ 
+					}else if( $("#apprLine").children(".ap-md-bd").length > 2 ){ // 3명 이상 선택 제한
 						
-					
-					
+						alert("최대 결재인원은 3명입니다.");
+						$("#appr-line").off('click');
+						
+					}else{
+						
+						$("#apprLine").append(data);
+					}
+        			
         		})
         		
         		$("#appr-line-ref").off('click').on('click', function(){ // 참조자
