@@ -29,7 +29,7 @@
 - 형상 관리 : Github
 - 사용 API : fullcalendar, summernote, fancytree plugin
 
-## 4️⃣ 주요 기능
+## 4️⃣ 주요 기능 (담당역할 : 전자결재)
 ## ✔️ 관리자
 ### 1. 결재양식 조회, 수정 및 삭제
 ![관리자_결재양식 수정](https://user-images.githubusercontent.com/103404636/205036937-89087c31-98e0-4791-9c6c-e84691f62985.gif)
