@@ -17,6 +17,17 @@
 - 쉽고 간편한 실시간 고객 관리
 
 ## 3️⃣ 개발환경
+- Language : Java (OpenJDK 11)
+- DBMS : Oracle (11g)
+- Front : HTML5, CSS3, JavaScript, jQuery, Bootstrap
+- Server : Apache Tomcat (9.0)
+- Server Programming : JSP/Servlet, AJAX
+- Framework : Spring, MyBatis
+- 프로젝트 관리도구 : Maven
+- IDE : STS3, Visual Studio Code, sqlDeveloper
+- Modeling Tool : StarUML, erdcloud, 카카오오븐
+- 형상 관리 : Github
+- 사용 API : fullcalendar, summernote, fancytree plugin
 
 ## 4️⃣ 주요 기능
 ## ✔️ 관리자
